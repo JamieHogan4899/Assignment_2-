@@ -71,18 +71,31 @@ describe("Movies endpoint", () => {
         });
     });
 
-    it("should return tmdb discover movies and a status 200", (done) => {
+
+    it("should return tmdb upcoming movies and a status 200", (done) => {
       request(api)
-        .get("/api/movies/tmdb/discover")
+        .get("/api/movies/tmdb/upcoming")
         .set("Authorization", user2token )
         .expect(200)
         .end((err, res) => {
           expect(res.body).to.be.a("object");
-          // console.log(res.body)
+          //console.log(res.body)
           done();
         });
     });
+
+
+
+
+
+
+
+
+
+
   });
+
+
 
 
 
