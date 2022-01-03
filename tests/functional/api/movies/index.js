@@ -84,6 +84,18 @@ describe("Movies endpoint", () => {
         });
     });
 
+    it("should return tmdb trending movies and a status 200", (done) => {
+      request(api)
+        .get("/api/movies/tmdb/trending")
+        .set("Authorization", user2token )
+        .expect(200)
+        .end((err, res) => {
+          expect(res.body).to.be.a("object");
+          console.log(res.body)
+          done();
+        });
+    });
+
 
 
 
