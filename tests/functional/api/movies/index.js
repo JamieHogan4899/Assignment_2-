@@ -91,6 +91,18 @@ describe("Movies endpoint", () => {
         .expect(200)
         .end((err, res) => {
           expect(res.body).to.be.a("object");
+          //console.log(res.body)
+          done();
+        });
+    });
+
+    it("should return tmdb the tv Shows and a status 200", (done) => {
+      request(api)
+        .get("/api/movies/tmdb/tvShows")
+        .set("Authorization", user2token )
+        .expect(200)
+        .end((err, res) => {
+          expect(res.body).to.be.a("object");
           console.log(res.body)
           done();
         });
