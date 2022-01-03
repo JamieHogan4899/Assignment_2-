@@ -51,7 +51,7 @@ describe("Movies endpoint", () => {
     .then((res) => {
       expect(res.body.success).to.be.true;
       expect(res.body.token).to.not.be.undefined;
-      user2token ="Bearer "+ res.body.token.substring(7); //assing user2 a bearer token
+      user2token ="Bearer "+ res.body.token.substring(7); //assinging user2 a bearer token
       console.log(user2token)
 
   });
