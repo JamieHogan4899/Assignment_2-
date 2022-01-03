@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var users = [{
   'username': 'user1',
-  'password': '   1'
+  'password': '1'
 }, {
   'username': 'user2',
   'password': 'test2'

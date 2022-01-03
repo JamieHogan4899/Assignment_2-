@@ -43,6 +43,7 @@ app.use('/api/movies', _authenticate["default"].authenticate('jwt', {
 app.use('/api/genres', _genres["default"]);
 app.use('/api/users', _users["default"]);
 app.use(errHandler);
-app.listen(port, function () {
+var server = app.listen(port, function () {
   console.info("Server running at ".concat(port));
 });
+module.exports = server;
