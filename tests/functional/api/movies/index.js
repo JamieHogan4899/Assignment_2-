@@ -119,7 +119,19 @@ describe("Movies endpoint", () => {
           .expect(200)
           .end((err, res) => {
             expect(res.body).to.be.a("object");
-            console.log(res.body)
+            //console.log(res.body)
+            done();
+          });
+      });
+
+      it("should return tmdb movies genres  and a status 200", (done) => {
+        request(api)
+          .get("/api/movies/tmdb/movieGenres")
+          .set("Authorization", user2token )
+          .expect(200)
+          .end((err, res) => {
+            expect(res.body).to.be.a("object");
+            //console.log(res.body)
             done();
           });
       });
