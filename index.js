@@ -5,8 +5,6 @@ import GenreRouter from './api/genres';
 import './db';
 import './seedData';
 import usersRouter from './api/users';
-import session from 'express-session';
-import authenticate from './authenticate';
 import passport from './authenticate';
 
 
