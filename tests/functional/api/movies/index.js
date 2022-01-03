@@ -103,21 +103,29 @@ describe("Movies endpoint", () => {
         .expect(200)
         .end((err, res) => {
           expect(res.body).to.be.a("object");
-          console.log(res.body)
+          //console.log(res.body)
           done();
         });
     });
 
-
-
-
-
-
-
-
-
-
   });
+
+  describe("GET /api/movies/tmdb/.., returns the genres", () => {  
+
+      it("should return tmdb the tv Show genres  and a status 200", (done) => {
+        request(api)
+          .get("/api/movies/tmdb/tvGenres")
+          .set("Authorization", user2token )
+          .expect(200)
+          .end((err, res) => {
+            expect(res.body).to.be.a("object");
+            console.log(res.body)
+            done();
+          });
+      });
+  
+
+    });
 
 
 
